@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My News Website</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.header {
+			background-color: #3c3c3c;
+			color: #f0f2f4;
+			text-align: center;
+			padding: 20px;
+		}
+
+		.subheader {
+			font-size: 16px;
+			font-weight: bold;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.navbar {
+			background-color: #f0f2f4;
+			overflow: hidden;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 10px;
+		}
+
+		.navbar a {
+			float: left;
+			display: block;
+			color: #333;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.navbar a:hover {
+			background-color: #92a7ba;
+			color: #333;
+		}
+
+		.navbar::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.navbar .active {
+			background-color: #d7dee4;
+			color: #6b7a99;
+		}
+
+		.tab-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            line-height: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 16px;
+		}
+
+		.tab-box div {
+			flex-grow: 1;
+			height: 40px;
+			border-right: 1px solid #ccc;
+			text-align: center;
+			line-height: 40px;
+			font-weight: bold;
+			font-size: 16px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.tab-box div:last-child {
+			border-right: none;
+		}
+
+		.content {
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>My News Website</h1>
+	  </div>
+	  <div class="subheader">
+		<p>Stay up to date with the latest news</p>
+	  </div>
+	  <div class="navbar">
+		<div class="tab-box">
+		  <div><a id="home-tab" class="tab-link" href="home-tab.html">Home</a></div>
+		  <div><a id="programming-tab" class="tab-link" href="programming-tab.html">Programming</a></div>
+		  <div><a id="crypto-tb" class="tab-link" href="crypto-tb.html">Crypto</a></div>
+		  <div><a id="commerce-tab" class="tab-link" href="commerce-tab.html">Commerce</a></div>
+		  <div><a id="esports-tab" class="tab-link" href="esports-tab.html">Esports</a></div>
+		</div>
+	  </div>
+	  <div class="content">
+		<p>This is the body of the website.</p>
+	  </div>
+
+	  <script>
+		// Get the current URL path
+		var path = window.location.pathname;
+	
+		// Get the name of the current HTML file
+		var page = path.split("/").pop();
+	
+		// Get the tab link that matches the current page and add the active class to it
+		var tabLink = document.querySelector('a[href="' + page + '"]');
+		if (tabLink) {
+			tabLink.classList.add("active");
+		}
+	</script>
+	
+	</body>
+	</html>
+
+	</body>
+</html>
+	  

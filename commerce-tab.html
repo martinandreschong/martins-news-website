@@ -90,21 +90,40 @@
 <body>
 	<div class="header">
 		<h1>My News Website</h1>
-	</div>
-	<div class="subheader">
+	  </div>
+	  <div class="subheader">
 		<p>Stay up to date with the latest news</p>
-	</div>
-	<div class="navbar">
+	  </div>
+	  <div class="navbar">
 		<div class="tab-box">
-			<div><a class="active" href="#home">Home</a></div>
-			<div><a href="#programming">Programming</a></div>
-			<div><a href="#crypto">Crypto</a></div>
-			<div><a href="#commerce">Commerce</a></div>
-			<div><a href="#esports">Esports</a></div>
+		  <div><a id="home-tab" class="tab-link" href="home-tab.html">Home</a></div>
+		  <div><a id="programming-tab" class="tab-link" href="programming-tab.html">Programming</a></div>
+		  <div><a id="crypto-tb" class="tab-link" href="crypto-tb.html">Crypto</a></div>
+		  <div><a id="commerce-tab" class="tab-link" href="commerce-tab.html">Commerce</a></div>
+		  <div><a id="esports-tab" class="tab-link" href="esports-tab.html">Esports</a></div>
 		</div>
-	</div>
-	<div class="content">
+	  </div>
+	  <div class="content">
 		<p>This is the body of the website.</p>
-	</div>
-</body>
+	  </div>
+
+	  <script>
+		// Get the current URL path
+		var path = window.location.pathname;
+	
+		// Get the name of the current HTML file
+		var page = path.split("/").pop();
+	
+		// Get the tab link that matches the current page and add the active class to it
+		var tabLink = document.querySelector('a[href="' + page + '"]');
+		if (tabLink) {
+			tabLink.classList.add("active");
+		}
+	</script>
+	
+	</body>
+	</html>
+
+	</body>
 </html>
+	  
